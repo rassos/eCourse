@@ -10,7 +10,7 @@ RUN unzip /tmp/pb.zip -d /eCourse/pb
 
 WORKDIR /eCourse/ui
 
-RUN grep -qxF 'VITE_PROD_PB_URL=' .env || echo 'VITE_PROD_PB_URL=http://ecourse:8090' >> .env
+RUN grep -qxF 'VITE_PROD_PB_URL=' .env || echo 'VITE_PROD_PB_URL=http://10.0.0.150:8090' >> .env
 RUN npm install
 RUN npm run build
 RUN mv dist/* /eCourse/pb/pb_public
